@@ -1,0 +1,54 @@
+
+
+<div class="container-fluid">
+    <div class="card mb-3">
+        
+        <div class="card-body">
+            <div class="card-header">
+                <h4>Query Box:
+                    <input type="text" (keyup.enter)=getTextBoxVal(query)  #query >
+                    <button type="button" class="btn btn-primary btn-sm" (click)=getTextBoxVal(query) > Search</button>
+                </h4>
+            </div>
+        </div>
+
+        <br><br>
+    
+
+        <div class="card-body">
+            <div class="card-header"> <h2>Data </h2> </div>
+                        
+                <table class="table">
+                    <thead style="background-color:aliceblue">
+                        <th>  Divisa </th>
+                        <th>  Fecha </th>
+                        <th>  Ultima Actualizacion </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="color: blueviolet; font-size:250%;">  {{divisa.base}} </td>
+                            <td> {{divisa.date}} </td>
+                            <td> {{divisa.time_last_updated}} </td>                         
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="card-header"> <h3> Values :</h3> </div>
+                <table class="table">
+                    <thead style="background-color:aliceblue">
+                        <th class="text-center">  Divisa </th>
+                        <th class="text-center">  Precio </th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let rate of rates | keyvalue">
+                            <td class="text-center">{{rate.key}}</td>
+                            <td class="text-center">{{rate.value}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+    </div>
+</div>
