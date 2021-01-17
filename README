@@ -1,8 +1,1 @@
-Practica Extra 1
-
-Macías Gómez Jorge 314318644
-
-
-Notas: Por alguna razon marca error de vez en cuando, se soluciona comentando 
-la línea 46 del divisa.component.ts, guardando y descomentado la línea. No logre encontrar
-porque fallaba porque es un error inusual. 
+App that consults API from, to give currency prices. 
